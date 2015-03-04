@@ -1,0 +1,12 @@
+<opml version="2.0">
+    <header>
+        <title>Markdown To OPML</title>
+    </header>
+    <body>
+        <outline text="科技类" title="科技类"/>
+        <outline htmlUrl="http://ipn.li/itgonglun/" title="IT 公论" type="rss" xmlUrl="http://ipn.li/itgonglun/feed"/>
+        <outline text="生活类" title="生活类"/>
+        <outline htmlUrl="http://ipn.li/itgonglun/" title="IT 公论" type="rss" xmlUrl="http://ipn.li/itgonglun/feed"/>
+    </body>
+</opml>
+

@@ -1,0 +1,123 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 940px; }
+
+.container-narrow > hr {
+  margin: 30px 0; }
+
+#add_url{
+    background-color:gray;
+}
+
+.modal-footer {
+    text-align:center;
+}
+
+.box {
+    padding: 6px;
+    border: 1px solid #d9d9d9;
+}
+
+.sep20 {
+    height: 20px;
+}
+
+.sep10 {
+    height: 10px;
+}
+
+.sep5 {
+    height: 5px;
+}
+
+.sep3 {
+    height: 3px;
+}
+
+.form-center{
+    text-align:center;
+    margin:0 auto;
+}
+
+.single{
+    overflow:hidden;        /*--設定超出的內容隱藏, IE, FireFox通用--*/
+    text-overflow:ellipsis; /*--(IE專用)在內容超出時,在後方補上逗號--*/
+    white-space:nowrap;     /*-- 設定內容強制顯示一行,直到內容結束或<br>--*/
+}
+.flash{
+    text-align:center;
+    margin:0 auto;
+    background: #cee5F5; 
+    padding: 0.5em;
+    border: 1px solid #aacbe2; }
+
+.search{
+    text-align:center;
+    margin:0 auto;
+}
+
+.s-title {
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    text-align: left;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+    position: relative;
+    background:#F5F5F5;
+}
+
+.tag_item {
+    height: 38px;
+}
+
+.tag_box a span {
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+.tag_box a {
+    padding: 3px 6px;
+    margin: 2px;
+    background: #eee;
+    color: #555;
+    border-radius: 3px;
+    text-decoration: none;
+    border: 1px dashed #cccccc;
+    overflow:hidden;        /*--設定超出的內容隱藏, IE, FireFox通用--*/
+    text-overflow:ellipsis; /*--(IE專用)在內容超出時,在後方補上逗號--*/
+    white-space:nowrap;     /*-- 設定內容強制顯示一行,直到內容結束或<br>--*/
+}
+
+
+.editable {
+    visibility: hidden;
+}
+
+#editable-normal {
+    display:inline;
+}
+
+#editable-edit {
+    display:none;
+}
+textarea{
+  height: 60%;
+}

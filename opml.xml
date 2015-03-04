@@ -1,0 +1,22 @@
+﻿<opml version="1.0">
+    <head>
+        <title>William Long subscriptions in Google Reader</title>
+    </head>
+    <body>
+        <outline title="internet" text="internet">
+            <outline text="Adsense中文观测站" title="Adsense中文观测站" type="rss"
+                xmlUrl="http://feeds.feedburner.com/adsense-tw" htmlUrl="http://adsense-tw.com"/>
+            <outline text="Angelived" title="Angelived" type="rss"
+            <outline text="Ogle Earth" title="Ogle Earth" type="rss"
+                xmlUrl="http://feeds.ogleearth.com/ogleearth" htmlUrl="http://www.ogleearth.com/"/>
+            <outline text="Panoramio" title="Panoramio" type="rss"
+                xmlUrl="http://www.panoramio.com/blog/feed/" htmlUrl="http://www.panoramio.com/blog"/>
+        </outline>
+        <outline title="game" text="game">
+            <outline text="PlayStation.Blog" title="PlayStation.Blog"
+                type="rss" xmlUrl="http://feeds.feedburner.com/psblog" htmlUrl="http://blog.us.playstation.com"/>
+            <outline text="Wired Game Life" title="Wired Game Life"
+                type="rss" xmlUrl="http://blog.wired.com/games/rss.xml" htmlUrl="http://blog.wired.com/games/"/>
+        </outline>
+    </body>
+</opml>

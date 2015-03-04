@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="container-narrow">
+  <br>
+  <h4 align="center">Mark2OPML</h4>
+  <br>
+  <div class="row-fluid">
+    <div class="span12">
+      <ul id="mytab" class="nav nav-tabs">
+        <li class="active"><a href="#use-url" data-toggle="tab">Online File</a></li>
+        <li><a href="#use-content" data-toggle="tab">Content Text</a></li>
+      </ul>
+
+      <form method="post" onsubmit="return dispatch();" action="/">
+        <div class="tab-content">
+          <div class="tab-pane active" id="use-url">
+            <input type="hidden" value="1" name="type">
+            <input class="span12" name="url" id="url" placeholder="Please input your markdown file url">
+          </div>
+          <br>
+          <div class="tab-pane" id="use-content">
+            <input type="hidden" value="2" name="type">
+            <textarea class="field span12" rows= "15" id="content" name="content" placeholder="Please paste your markdown content here"></textarea>
+          </div>
+        </div>
+        <div align=center>
+        <button class="btn">Generate</button>
+        </div>
+      </form>
+    </div>
+    <br>
+    <textarea class="field span12" rows="20"  id="result" name="result" placeholder="The result will be show here">{{result}}</textarea>
+    <div align=center>
+      <button class="btn">Save as</button>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+<script>
+  var dispatch = function() {
+    q = document.getElementById("content");
+    if (q.value != "") {
+      return true;
+    }
+
+    var reg = 
+    "/" +
+    // protocol identifier
+    "(?:(?:https?|ftp)://)" +
+    // user:pass authentication
+    "(?:\\S+(?::\\S*)?@)?" +
+    "(?:" +
+    // IP address exclusion
+    // private & local networks
+    "(?!(?:10|127)(?:\\.\\d{1,3}){3})" +
+    "(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})" +
+    "(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})" +
+    // IP address dotted notation octets
+    // excludes loopback network 0.0.0.0
+    // excludes reserved space >= 224.0.0.0
+    // excludes network & broacast addresses
+    // (first & last IP address of each class)
+    "(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])" +
+    "(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}" +
+    "(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))" +
+    "|" +
+    // host name
+    "(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)" +
+    // domain name
+    "(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*" +
+    // TLD identifier
+    "(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))" +
+    ")" +
+    // port number
+    "(?::\\d{2,5})?" +
+    // resource path
+    "(?:/\\S*)?" +
+    "$/i";
+    q = document.getElementById("url");
+    if (q.value == "" || !reg.test(q.value)) {
+      alert("Please input valid content!");
+      return false;
+    }
+    return true;
+  }
+</script>
+{% endblock %}
